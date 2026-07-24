@@ -1,0 +1,11 @@
+We would like to publicly acknowledge and thank the following security researchers for their efforts and
+participation in our coordinated disclosure process:
+
+- Subhash Kumawat (2025-08-10)
+- Fatih Yalcinkaya, MD (2025-11-21)
+- Amir Habeeb (2026-01-11)
+- Abdelrahman Fathy (2026-02-04)
+- Sardar Zabi (2026-02-08)
+- Akhlakur Rahman Tanvir, MD (2026-02-10)
+- Nassur Juma (2026-02-19)
+- Yeshwanth B (2026-02-24)

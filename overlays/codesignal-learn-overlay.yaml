@@ -1,0 +1,30 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for CodeSignal Learn Public API
+  version: 1.0.0
+extends: openapi/codesignal-learn-openapi.json
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-enriched: true
+      x-api-evangelist-provider: codesignal
+  - target: $
+    update:
+      servers:
+        - url: https://codesignal.com/learn
+          description: Production (paths are relative to /learn)
+  - target: $.paths['/api/v1/organizations/members'].get
+    update:
+      operationId: listOrganizationMembers
+  - target: $.paths['/api/v1/organizations/members/{memberId}'].get
+    update:
+      operationId: getOrganizationMember
+  - target: $.paths['/api/v1/organizations/members/skill-sets'].get
+    update:
+      operationId: listMemberSkillSets
+  - target: $.paths['/api/v1/organizations/members/progress'].get
+    update:
+      operationId: listMemberProgress
+  - target: $.paths['/api/v1/organizations/members/{memberId}/progress'].get
+    update:
+      operationId: getMemberProgress

@@ -1,0 +1,42 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/codesignal-learn-openapi.json
+description: >-
+  Entity graph derived from the Learn Public API OpenAPI. The public Learn
+  surface exposes organization members, their skill sets, and their learning
+  progress. Richer entities (companies, tests, test sessions, interviews,
+  interview templates, tasks) are exposed via the GraphQL API and the MCP server
+  but are not part of this OpenAPI's schema components.
+entities:
+  - name: Organization
+    operations:
+      - GET /api/v1/organizations/members
+  - name: Member
+    id_field: memberId
+    operations:
+      - GET /api/v1/organizations/members/{memberId}
+      - GET /api/v1/organizations/members/{memberId}/progress
+    relationships:
+      - type: belongs_to
+        target: Organization
+      - type: has_many
+        target: SkillSet
+        via: member_id
+      - type: has_many
+        target: Progress
+        via: memberId
+  - name: SkillSet
+    operations:
+      - GET /api/v1/organizations/members/skill-sets
+    relationships:
+      - type: belongs_to
+        target: Member
+        via: member_id
+  - name: Progress
+    operations:
+      - GET /api/v1/organizations/members/progress
+      - GET /api/v1/organizations/members/{memberId}/progress
+    relationships:
+      - type: belongs_to
+        target: Member
+        via: memberId

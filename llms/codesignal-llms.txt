@@ -1,0 +1,28 @@
+# CodeSignal
+
+> CodeSignal is a technical interview and skills-assessment platform. Its developer surface exposes a GraphQL API, a versioned Learn REST API (OpenAPI 3.1), a webhook event API, and an official remote MCP server for AI agents to work with assessments, candidate test sessions, and live interviews.
+
+## APIs
+- [GraphQL API](https://app.codesignal.com/graphql): Primary API for companies, tests, test sessions, interviews, and interview templates. HTML schema docs at developer.codesignal.com.
+- [Learn Public API](https://codesignal.com/learn/api/v1/openapi): OpenAPI 3.1 REST API for organization members, skill sets, and learning progress. OAuth 2.0 client-credentials.
+- [Webhook API](https://developer.codesignal.com/): 14 event types across assessment, candidate, auditor, and live-interview workflows; HMAC-SHA256 signed deliveries.
+- [MCP Server](https://codesignal.com/api/mcp): Official remote MCP server (HTTP transport, Bearer API key).
+
+## Specs
+- [Learn OpenAPI 3.1](openapi/codesignal-learn-openapi.json)
+- [Webhook event catalog](asyncapi/codesignal-webhooks.yml)
+- [MCP server manifest](mcp/codesignal-mcp.yml)
+- [Authentication profile](authentication/codesignal-authentication.yml)
+- [OAuth scopes](scopes/codesignal-scopes.yml)
+- [API conventions](conventions/codesignal-conventions.yml)
+- [Error responses](errors/codesignal-problem-types.yml)
+- [Data model](data-model/codesignal-data-model.yml)
+
+## Docs
+- [Developer docs](https://developer.codesignal.com/)
+- [Developer docs source](https://github.com/codesignal/developer-docs)
+- [MCP server repo](https://github.com/codesignal/codesignal-mcp-server)
+- [Status page](https://status.codesignal.com/)
+- [Security disclosure policy](https://codesignal.com/security/disclosure-policy)
+- [Trust Center](https://trust.codesignal.com/)
+- [GitHub organization](https://github.com/codesignal)

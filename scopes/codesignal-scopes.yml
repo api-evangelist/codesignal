@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/codesignal-learn-openapi.json
+schemes:
+- name: oauth2
+  source: openapi/codesignal-learn-openapi.json
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://codesignal.com/learn/api/v1/oauth/token
+scopes:
+- scope: openid
+  description: basic scope
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/codesignal-learn-openapi.json

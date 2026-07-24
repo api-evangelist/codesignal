@@ -1,0 +1,18 @@
+generated: '2026-07-18'
+method: generated
+skills:
+  - file: codesignal-screen-candidate.md
+    name: Screen a candidate with a CodeSignal assessment
+    api: mcp/codesignal-mcp.yml
+    operations: [list_tests, get_test, create_test_session, grade_test_result, mark_test_result_graded]
+  - file: codesignal-run-live-interview.md
+    name: Schedule and run a CodeSignal live interview
+    api: mcp/codesignal-mcp.yml
+    operations: [list_interview_templates, create_interview, get_interview, edit_interview]
+  - file: codesignal-track-learn-progress.md
+    name: Track organization learning progress via the Learn API
+    api: openapi/codesignal-learn-openapi.json
+    operations:
+      - GET /api/v1/organizations/members
+      - GET /api/v1/organizations/members/progress
+      - GET /api/v1/organizations/members/skill-sets

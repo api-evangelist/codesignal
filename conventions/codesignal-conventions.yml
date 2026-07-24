@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.codesignal.com/
+description: >-
+  Cross-cutting request/response semantics for the CodeSignal developer surface
+  (Learn REST API, GraphQL API, MCP server, and webhooks), derived from the
+  developer docs and the Learn OpenAPI.
+authentication:
+  learn_api: >-
+    OAuth 2.0 client-credentials (openid scope); Bearer access token from
+    https://codesignal.com/learn/api/v1/oauth/token
+  graphql_and_mcp: >-
+    API key via the Authorization Bearer header (or X-CodeSignal-Key header);
+    keys issued on paid plans with granular permissions
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key header is documented for the public REST/GraphQL surface.
+    Webhook delivery is at-least-once with retries, so subscribers should treat
+    events idempotently keyed on (event, testSessionId, triggeredOn).
+pagination:
+  style: page-number
+  params:
+    - page
+    - per_page
+  sort_params:
+    - sort_by
+    - sort_order
+  applies_to: Learn API organization/member endpoints
+timestamps:
+  unit: milliseconds
+  notes: Timestamps and durations are in milliseconds unless the field name indicates otherwise (per MCP server and webhook docs).
+error_envelope:
+  learn_api: HTTP 400 (Bad request) and 401 (Unauthorized) responses on Learn endpoints.
+  graphql: GraphQL errors returned in the standard `errors[]` array.
+webhooks:
+  signature_header: X-CodeSignal-Signature
+  signature_algorithm: HMAC-SHA256
+  see: asyncapi/codesignal-webhooks.yml
+cross_links:
+  authentication: authentication/codesignal-authentication.yml
+  scopes: scopes/codesignal-scopes.yml
+  errors: errors/codesignal-problem-types.yml
+  lifecycle: lifecycle/codesignal-lifecycle.yml
+  webhooks: asyncapi/codesignal-webhooks.yml

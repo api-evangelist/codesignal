@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: derived
+format: http-status
+source: openapi/codesignal-learn-openapi.json
+description: >-
+  Error responses derived from the Learn Public API OpenAPI. The spec declares
+  plain HTTP status responses (not RFC 9457 problem+json). Every Learn operation
+  advertises 400 and 401 responses.
+problems:
+  - status: 400
+    schema: BadRequest
+    title: Bad request
+    remediation: Check query/path parameters (page, per_page, sort_by, sort_order, search, role, member_id, memberId, id).
+    applies_to: all Learn organization/member operations
+  - status: 401
+    schema: Unauthorized
+    title: Unauthorized
+    remediation: Obtain a valid OAuth2 client-credentials access token (openid scope) from https://codesignal.com/learn/api/v1/oauth/token.
+    applies_to: all Learn organization/member operations

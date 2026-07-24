@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/codesignal-learn-openapi.json
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: Learn OpenAPI declares an oauth2 securityScheme with a clientCredentials flow.
+  - id: oidc
+    conforms: partial
+    evidence: The single OAuth2 scope is "openid", but no /.well-known/openid-configuration discovery document is published (404).
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Error responses use plain HTTP status codes, not application/problem+json.
+  - id: hmac-signed-webhooks
+    conforms: true
+    evidence: Webhook deliveries are signed with HMAC-SHA256 in the X-CodeSignal-Signature header.
+  - id: pagination
+    conforms: true
+    evidence: Page-number pagination (page/per_page) on Learn organization endpoints.
+  - id: idempotency
+    conforms: false
+    evidence: No idempotency-key mechanism documented for the public API.

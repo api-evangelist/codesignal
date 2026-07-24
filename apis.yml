@@ -1,7 +1,28 @@
 aid: codesignal
 name: Codesignal
-description: Codesignal is a company surfaced as a portfolio company of menlo-ventures and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  CodeSignal is a technical interview and skills-assessment platform used by
+  companies to screen, interview, and upskill software engineers. Its developer
+  surface includes a GraphQL API (companies, tests, test sessions, interviews,
+  and interview templates), a versioned Learn REST API (OpenAPI 3.1) for
+  organization members, skill sets, and learning progress, a webhook event API
+  covering assessment, candidate, auditor, and live-interview workflows with
+  HMAC-SHA256 signed deliveries, and an official remote MCP server that lets AI
+  agents work with assessments, candidate sessions, and interviews. CodeSignal is
+  backed by Menlo Ventures.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://codesignal.com/wp-content/uploads/2022/12/codesignal-fallbck.jpg
 url: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,15 +32,117 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Technical Interview
+- Skills Assessment
+- Hiring
+- Recruiting
+- Developer Skills
+- Assessment
+- Education
+- GraphQL
+- Webhooks
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: CodeSignal GraphQL API
+  description: >-
+    Primary GraphQL API for companies, tests, test sessions, live interviews, and interview templates.
+    Authenticated with an API key.
+  humanURL: https://developer.codesignal.com/
+  baseURL: https://app.codesignal.com/graphql
+  properties:
+  - type: GraphQL
+    url: https://app.codesignal.com/graphql
+  - type: Documentation
+    url: https://codesignal.github.io/developer-docs/graphql/
+- name: CodeSignal Webhook API
+  description: >-
+    Outbound webhook events across assessment, candidate, auditor, and live-interview workflows. Deliveries
+    are signed with HMAC-SHA256.
+  humanURL: https://developer.codesignal.com/
+  baseURL: https://app.codesignal.com/client-dashboard/integrations/webhooks
+  properties:
+  - type: Webhooks
+    url: asyncapi/codesignal-webhooks.yml
+- aid: codesignal:codesignal-organization-api
+  name: Codesignal Organization API
+  description: The Organization API from Codesignal — 5 operation(s) for organization.
+  humanURL: https://developer.codesignal.com/
+  baseURL: https://codesignal.com/learn
+  tags:
+  - Organization
+  properties:
+  - type: OpenAPI
+    url: openapi/codesignal-organization-api-openapi.yml
 common:
+- type: MCPServer
+  url: mcp/codesignal-mcp.yml
+- type: Webhooks
+  url: asyncapi/codesignal-webhooks.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Authentication
+  url: authentication/codesignal-authentication.yml
+- type: OAuthScopes
+  url: scopes/codesignal-scopes.yml
+- type: Conventions
+  url: conventions/codesignal-conventions.yml
+- type: ErrorCatalog
+  url: errors/codesignal-problem-types.yml
+- type: DataModel
+  url: data-model/codesignal-data-model.yml
+- type: Conformance
+  url: conformance/codesignal-conformance.yml
+- type: Lifecycle
+  url: lifecycle/codesignal-lifecycle.yml
+- type: StatusPage
+  url: https://status.codesignal.com/
+- type: Overlay
+  url: overlays/codesignal-learn-overlay.yaml
+- type: LLMsTxt
+  url: llms/codesignal-llms.txt
+- type: WellKnown
+  url: well-known/codesignal-well-known.yml
+- type: SecurityTxt
+  url: well-known/codesignal-security.txt
+- type: VulnerabilityDisclosure
+  url: security/codesignal-vulnerability-disclosure.yml
+- type: Security
+  url: https://codesignal.com/security/disclosure-policy
+- type: TrustCenter
+  url: https://trust.codesignal.com/
+- type: DomainSecurity
+  url: security/codesignal-domain-security.yml
+- type: DeveloperPortal
+  url: https://developer.codesignal.com/
+- type: Documentation
+  url: https://developer.codesignal.com/
+- type: APIReference
+  url: https://codesignal.github.io/developer-docs/graphql/
+- type: GitHubOrganization
+  url: https://github.com/codesignal
+- type: Support
+  url: https://support.codesignal.com/
+- type: Blog
+  url: https://codesignal.com/blog
+- type: Pricing
+  url: https://codesignal.com/pricing
+- type: SignUp
+  url: https://app.codesignal.com/sign-up
+- type: TermsOfService
+  url: https://codesignal.com/terms
+- type: PrivacyPolicy
+  url: https://codesignal.com/privacy
 - type: Website
   url: https://codesignal.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

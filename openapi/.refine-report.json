@@ -1,0 +1,14 @@
+{
+  "provider": "codesignal",
+  "sources": [
+    "codesignal-organization-api-openapi.yml"
+  ],
+  "outputs": [
+    "codesignal-organization-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

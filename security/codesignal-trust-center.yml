@@ -1,0 +1,14 @@
+generated: '2026-07-18'
+method: searched
+probe: false
+url: https://trust.codesignal.com/
+description: >-
+  CodeSignal operates a public Trust Center at trust.codesignal.com (returns
+  HTTP 200, titled "CodeSignal Trust Center"). The portal is a client-rendered
+  application; specific certification names could not be extracted verbatim from
+  the static response, so none are asserted here. No Compliance pointer is
+  emitted until named certifications are verified.
+certifications: []
+evidence:
+  - source: https://trust.codesignal.com/
+    note: Trust Center page present (HTTP 200); certifications not machine-extractable from static HTML.

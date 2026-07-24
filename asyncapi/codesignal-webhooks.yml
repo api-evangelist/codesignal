@@ -1,0 +1,92 @@
+generated: '2026-07-18'
+method: searched
+type: Webhooks
+source: https://developer.codesignal.com/
+docs: https://github.com/codesignal/developer-docs
+description: >-
+  CodeSignal Webhook API. Webhooks are configured per company in the CodeSignal
+  dashboard and deliver JSON events to a subscriber endpoint that must return
+  HTTP 200. There is no published AsyncAPI document; this captures the webhook
+  event catalog and delivery semantics verbatim from the developer docs.
+configuration:
+  dashboard: https://app.codesignal.com/client-dashboard/integrations/webhooks
+  fields:
+    - endpoint_url        # subscriber URL, must return HTTP 200
+    - event_types         # events to subscribe to
+    - secret_key          # optional but recommended, used to sign deliveries
+    - owner_emails        # optional, receive failure notifications
+    - custom_headers      # optional
+envelope:
+  fields:
+    - name: event
+      type: string
+      description: The event type name.
+    - name: triggeredOn
+      type: number
+      description: Milliseconds since the Unix epoch.
+    - name: payload
+      type: object
+      description: Event-specific data.
+  common_payload_fields:
+    - testSessionId
+    - testId
+    - testTitle
+    - candidateEmail
+    - candidateName
+    - score
+    - maxScore
+    - duration
+    - url
+    - externalId          # optional
+signature:
+  header: X-CodeSignal-Signature
+  algorithm: HMAC-SHA256
+  scheme: 'HMAC-SHA256(secretKey, endpointUrl + eventType + triggeredOn)'
+delivery:
+  max_attempts: 25
+  backoff: '(failCount - 1)^4 + 15 + (random(30) * failCount) seconds'
+  disable_after: 25 consecutive failures
+  failure_notifications: after the 5th, 14th, and every failure from the 16th onward
+events:
+  - name: assessmentCreated
+    category: Assessment
+    description: A new assessment is created.
+  - name: assessmentUpdated
+    category: Assessment
+    description: An assessment is modified.
+  - name: companyTestSessionCreated
+    category: Assessment
+    description: A test session is created.
+  - name: preScreenCandidateDeclined
+    category: Candidate Workflow
+    description: Candidate rejects a test invitation.
+  - name: preScreenResultShared
+    category: Candidate Workflow
+    description: Candidate shares an existing result.
+  - name: preScreenExpired
+    category: Candidate Workflow
+    description: A test session cannot be fulfilled within its expiration window.
+  - name: companyTestSessionStarted
+    category: Candidate Workflow
+    description: Candidate begins a test.
+  - name: preScreenResultVerificationPending
+    category: Candidate Workflow
+    description: A proctored test finishes and is awaiting verification.
+  - name: companyTestSessionFinished
+    category: Candidate Workflow
+    description: A non-proctored test completes.
+  - name: preScreenIntegrityReviewUpdated
+    category: Candidate Workflow
+    description: Integrity review status changes.
+  - name: preScreenResultNotVerified
+    category: Auditor Workflow
+    description: Session flagged for suspicious behavior or technical issues.
+  - name: preScreenResultVerified
+    category: Auditor Workflow
+    description: Proctored test verified by CodeSignal.
+  - name: liveInterviewFinished
+    category: Live Interview
+    description: Interviewer ends the session or the interview times out.
+  - name: liveInterviewFeedbackUpdated
+    category: Live Interview
+    description: Interviewer adds or updates feedback.

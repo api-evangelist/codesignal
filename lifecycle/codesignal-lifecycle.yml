@@ -1,0 +1,15 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.codesignal.com/
+versioning:
+  scheme: uri-path
+  current: v1
+  notes: Learn Public API is versioned in the path (/learn/api/v1/...). GraphQL is a single evolving endpoint at https://app.codesignal.com/graphql.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal deprecation/sunset-header policy published on the developer docs.
+status_page: https://status.codesignal.com/
+sla:
+  url: null
+deprecated_operations: []

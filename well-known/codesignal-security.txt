@@ -1,0 +1,7 @@
+Contact: mailto:security@codesignal.com
+Policy: https://codesignal.com/security/disclosure-policy
+Expires: 2027-12-31T15:00:00.000Z
+Preferred-Languages: en
+Canonical: https://codesignal.com/.well-known/security.txt
+Acknowledgments: https://codesignal.com/.well-known/security-acknowledgments.txt
+
