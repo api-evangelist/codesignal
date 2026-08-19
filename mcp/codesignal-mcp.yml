@@ -6,70 +6,84 @@ server:
   name: codesignal
   transport: http
   url: https://codesignal.com/api/mcp
-  description: >-
-    Official remote MCP server that lets AI agents work with CodeSignal
-    assessments, candidate test sessions, and live interviews.
+  description: Official remote MCP server that lets AI agents work with CodeSignal assessments, candidate
+    test sessions, and live interviews.
   repo: https://github.com/codesignal/codesignal-mcp-server
   license: Apache-2.0
 authentication:
   type: api_key
   headers:
-    - name: Authorization
-      value: 'Bearer <CodeSignal API key>'
-      preferred: true
-    - name: X-CodeSignal-Key
-      value: '<CodeSignal API key>'
-  notes: >-
-    API keys are available on paid CodeSignal plans with granular permissions.
-    Write tools modify live production data. Timestamps/durations are in
-    milliseconds unless the field name indicates otherwise.
+  - name: Authorization
+    value: Bearer <CodeSignal API key>
+    preferred: true
+  - name: X-CodeSignal-Key
+    value: <CodeSignal API key>
+  notes: API keys are available on paid CodeSignal plans with granular permissions. Write tools modify
+    live production data. Timestamps/durations are in milliseconds unless the field name indicates otherwise.
 install:
-  claude_code: >-
-    claude mcp add --transport http codesignal https://codesignal.com/api/mcp
-    --header "Authorization: Bearer <your CodeSignal API key>"
-  json_config: |
-    {
-      "mcpServers": {
-        "codesignal": {
-          "url": "https://codesignal.com/api/mcp",
-          "headers": {
-            "Authorization": "Bearer <your CodeSignal API key>"
-          }
-        }
-      }
-    }
+  claude_code: 'claude mcp add --transport http codesignal https://codesignal.com/api/mcp --header "Authorization:
+    Bearer <your CodeSignal API key>"'
+  json_config: "{\n  \"mcpServers\": {\n    \"codesignal\": {\n      \"url\": \"https://codesignal.com/api/mcp\"\
+    ,\n      \"headers\": {\n        \"Authorization\": \"Bearer <your CodeSignal API key>\"\n      }\n\
+    \    }\n  }\n}\n"
 tool_groups:
-  - group: Company & Access
-    tools: [get_company, get_user, list_company_roles, get_role]
-  - group: Tests
-    tools: [list_tests, get_test, list_test_labels, create_test, edit_test, duplicate_test]
-  - group: Certified Assessments
-    tools: [list_certified_assessments, get_standardized_test, create_test_from_certified_assessment]
-  - group: Test Sessions
-    tools:
-      - list_test_sessions
-      - get_test_session
-      - get_standardized_test_session
-      - lookup_ats_test_sessions
-      - create_test_session
-      - resend_test_session
-      - reactivate_test_session
-      - edit_test_session_duration
-      - edit_test_session_expiration
-      - set_test_session_reminders
-      - archive_test_session
-      - unarchive_test_session
-      - grade_test_result
-      - mark_test_result_graded
-      - delete_test_session
-  - group: Live Interviews
-    tools: [list_interviews, get_interview, create_interview, edit_interview, delete_interview]
-  - group: Interview Templates
-    tools:
-      - list_interview_templates
-      - get_interview_template
-      - create_interview_template
-      - edit_interview_template
-      - delete_interview_template
-  - group: Questions
-    tools: [get_task]
+- group: Company & Access
+  tools:
+  - get_company
+  - get_user
+  - list_company_roles
+  - get_role
+- group: Tests
+  tools:
+  - list_tests
+  - get_test
+  - list_test_labels
+  - create_test
+  - edit_test
+  - duplicate_test
+- group: Certified Assessments
+  tools:
+  - list_certified_assessments
+  - get_standardized_test
+  - create_test_from_certified_assessment
+- group: Test Sessions
+  tools:
+  - list_test_sessions
+  - get_test_session
+  - get_standardized_test_session
+  - lookup_ats_test_sessions
+  - create_test_session
+  - resend_test_session
+  - reactivate_test_session
+  - edit_test_session_duration
+  - edit_test_session_expiration
+  - set_test_session_reminders
+  - archive_test_session
+  - unarchive_test_session
+  - grade_test_result
+  - mark_test_result_graded
+  - delete_test_session
+- group: Live Interviews
+  tools:
+  - list_interviews
+  - get_interview
+  - create_interview
+  - edit_interview
+  - delete_interview
+- group: Interview Templates
+  tools:
+  - list_interview_templates
+  - get_interview_template
+  - create_interview_template
+  - edit_interview_template
+  - delete_interview_template
+- group: Questions
+  tools:
+  - get_task
+deployment:
+  mode: remote
+  endpoint: https://codesignal.com/api/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census

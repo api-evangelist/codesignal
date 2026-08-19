@@ -1,0 +1,1303 @@
+{
+  "item": [
+    {
+      "id": "fe82cbde-2b0c-4e89-8663-75020415a6cc",
+      "name": "Organization",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dde75f80-c9d1-4241-8ddc-32526f581b1f",
+          "name": "Get organization members",
+          "request": {
+            "name": "Get organization members",
+            "description": {
+              "content": "Returns paginated members for your organization",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "organizations",
+                "members"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "20"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort_by",
+                  "value": "email"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort_order",
+                  "value": "asc"
+                },
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "role",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "openid"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://codesignal.com/learn/api/v1/oauth/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f27a2895-9e0f-440f-a4b5-2899925a677e",
+              "name": "Paginated organization members.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "20"
+                    },
+                    {
+                      "key": "sort_by",
+                      "value": "email"
+                    },
+                    {
+                      "key": "sort_order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "role",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"codesignalId\": \"string\",\n      \"email\": \"string\",\n      \"name\": \"string\",\n      \"role\": {\n        \"id\": \"string\",\n        \"name\": \"string\"\n      },\n      \"lastActivity\": \"string\",\n      \"teams\": [\n        {\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    },\n    {\n      \"id\": \"string\",\n      \"codesignalId\": \"string\",\n      \"email\": \"string\",\n      \"name\": \"string\",\n      \"role\": {\n        \"id\": \"string\",\n        \"name\": \"string\"\n      },\n      \"lastActivity\": \"string\",\n      \"teams\": [\n        {\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"pagination\": {\n    \"page\": 3076.2850675106047,\n    \"per_page\": 863.6814234120716,\n    \"total\": 3050.4119651443452,\n    \"errors\": 8271.049469746607\n  },\n  \"errors\": [\n    {\n      \"status\": 9401.855548676947,\n      \"message\": \"string\",\n      \"data\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      }\n    },\n    {\n      \"status\": 2149.570503935414,\n      \"message\": \"string\",\n      \"data\": {\n        \"key_0\": {}\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "df378b0f-3d11-42a5-b8e1-5aafc732e90a",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "20"
+                    },
+                    {
+                      "key": "sort_by",
+                      "value": "email"
+                    },
+                    {
+                      "key": "sort_order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "role",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1d784087-b009-4713-8026-8646632cdfd8",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "20"
+                    },
+                    {
+                      "key": "sort_by",
+                      "value": "email"
+                    },
+                    {
+                      "key": "sort_order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "role",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "306bd0ff-17c3-4cb5-b583-56199cd566e7",
+          "name": "Get member by ID",
+          "request": {
+            "name": "Get member by ID",
+            "description": {
+              "content": "Returns details for a specific organization member.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "organizations",
+                "members",
+                ":memberId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "memberId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "openid"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://codesignal.com/learn/api/v1/oauth/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f6593703-fee8-4384-b1cd-7e8fa0c4d739",
+              "name": "Member details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    ":memberId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "memberId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"codesignalId\": \"string\",\n  \"email\": \"string\",\n  \"name\": \"string\",\n  \"role\": {\n    \"id\": \"string\",\n    \"name\": \"string\"\n  },\n  \"lastActivity\": \"string\",\n  \"teams\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d60d8d56-9c85-42a5-84bc-194fa4b1ced1",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    ":memberId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "memberId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7ba7c594-fdd7-4e86-8f8b-e58516ecb418",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    ":memberId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "memberId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "02ae600d-5ff4-4341-9cb3-a6ac63c18b13",
+          "name": "Get skill sets for organization members",
+          "request": {
+            "name": "Get skill sets for organization members",
+            "description": {
+              "content": "Returns paginated skill sets for specified organization members.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "organizations",
+                "members",
+                "skill-sets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "20"
+                },
+                {
+                  "disabled": false,
+                  "key": "member_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "openid"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://codesignal.com/learn/api/v1/oauth/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "cb5be4ee-bd48-46d8-a81d-b19bd1c8cc99",
+              "name": "Paginated skill sets for organization members.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    "skill-sets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "20"
+                    },
+                    {
+                      "key": "member_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"skillSets\": [\n        {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"level\": \"intermediate\",\n          \"type\": \"soft\",\n          \"imageUrl\": \"string\"\n        },\n        {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"level\": \"expert\",\n          \"type\": \"hard\",\n          \"imageUrl\": \"string\"\n        }\n      ]\n    },\n    {\n      \"id\": \"string\",\n      \"skillSets\": [\n        {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"level\": \"intermediate\",\n          \"type\": \"soft\",\n          \"imageUrl\": \"string\"\n        },\n        {\n          \"id\": \"string\",\n          \"name\": \"string\",\n          \"level\": \"developing\",\n          \"type\": \"hard\",\n          \"imageUrl\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"pagination\": {\n    \"page\": 3513.853181383425,\n    \"per_page\": 2044.0758291400418,\n    \"total\": 8870.445784065112,\n    \"errors\": 9515.449346989606\n  },\n  \"errors\": [\n    {\n      \"status\": 6213.690172414183,\n      \"message\": \"string\",\n      \"data\": {\n        \"key_0\": {},\n        \"key_1\": {},\n        \"key_2\": {}\n      }\n    },\n    {\n      \"status\": 3852.6071713367473,\n      \"message\": \"string\",\n      \"data\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ca5656b2-437a-40f5-b48a-6d7d8a7b3504",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    "skill-sets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "20"
+                    },
+                    {
+                      "key": "member_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "19d2c295-1023-4088-8146-71732f07e8ed",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    "skill-sets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "20"
+                    },
+                    {
+                      "key": "member_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b8742319-ca6f-44c4-a7b4-4ec46ffa5316",
+          "name": "Get progress for organization members",
+          "request": {
+            "name": "Get progress for organization members",
+            "description": {
+              "content": "Returns paginated progress for specified organization members",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "organizations",
+                "members",
+                "progress"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "20"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort_by",
+                  "value": "email"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort_order",
+                  "value": "asc"
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "openid"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://codesignal.com/learn/api/v1/oauth/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "25a704a4-5273-45e1-acbc-56db0b4723a8",
+              "name": "Paginated progress for organization members.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    "progress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "20"
+                    },
+                    {
+                      "key": "sort_by",
+                      "value": "email"
+                    },
+                    {
+                      "key": "sort_order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"email\": \"string\",\n      \"paths\": [\n        {\n          \"id\": 2015.0780475980011,\n          \"title\": \"string\",\n          \"completionRatio\": 7215.785365513853,\n          \"completed\": false,\n          \"completedAt\": \"string\",\n          \"certificateUrl\": \"string\",\n          \"job\": {\n            \"id\": \"string\",\n            \"name\": \"string\"\n          },\n          \"courses\": [\n            {\n              \"id\": 7816.024825855845,\n              \"title\": \"string\",\n              \"completionRatio\": 5450.844462169707,\n              \"completed\": false,\n              \"completedAt\": \"string\",\n              \"certificateUrl\": \"string\"\n            },\n            {\n              \"id\": 6670.181869391167,\n              \"title\": \"string\",\n              \"completionRatio\": 6159.892013922512,\n              \"completed\": true,\n              \"completedAt\": \"string\",\n              \"certificateUrl\": \"string\"\n            }\n          ]\n        },\n        {\n          \"id\": 8063.072450225065,\n          \"title\": \"string\",\n          \"completionRatio\": 9554.82443396461,\n          \"completed\": true,\n          \"completedAt\": \"string\",\n          \"certificateUrl\": \"string\",\n          \"job\": {\n            \"id\": \"string\",\n            \"name\": \"string\"\n          },\n          \"courses\": [\n            {\n              \"id\": 2066.532966464061,\n              \"title\": \"string\",\n              \"completionRatio\": 6352.383322153379,\n              \"completed\": true,\n              \"completedAt\": \"string\",\n              \"certificateUrl\": \"string\"\n            },\n            {\n              \"id\": 2850.763978830284,\n              \"title\": \"string\",\n              \"completionRatio\": 4349.108080914376,\n              \"completed\": false,\n              \"completedAt\": \"string\",\n              \"certificateUrl\": \"string\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"id\": \"string\",\n      \"email\": \"string\",\n      \"paths\": [\n        {\n          \"id\": 3684.7352272406265,\n          \"title\": \"string\",\n          \"completionRatio\": 3550.1478231003257,\n          \"completed\": true,\n          \"completedAt\": \"string\",\n          \"certificateUrl\": \"string\",\n          \"job\": {\n            \"id\": \"string\",\n            \"name\": \"string\"\n          },\n          \"courses\": [\n            {\n              \"id\": 5029.739092390229,\n              \"title\": \"string\",\n              \"completionRatio\": 6702.576467558234,\n              \"completed\": false,\n              \"completedAt\": \"string\",\n              \"certificateUrl\": \"string\"\n            },\n            {\n              \"id\": 3839.752327809214,\n              \"title\": \"string\",\n              \"completionRatio\": 4854.545739926513,\n              \"completed\": true,\n              \"completedAt\": \"string\",\n              \"certificateUrl\": \"string\"\n            }\n          ]\n        },\n        {\n          \"id\": 2584.0243311175627,\n          \"title\": \"string\",\n          \"completionRatio\": 4255.459386968029,\n          \"completed\": true,\n          \"completedAt\": \"string\",\n          \"certificateUrl\": \"string\",\n          \"job\": {\n            \"id\": \"string\",\n            \"name\": \"string\"\n          },\n          \"courses\": [\n            {\n              \"id\": 3850.5198554879685,\n              \"title\": \"string\",\n              \"completionRatio\": 9115.702144976336,\n              \"completed\": false,\n              \"completedAt\": \"string\",\n              \"certificateUrl\": \"string\"\n            },\n            {\n              \"id\": 8331.93255646345,\n              \"title\": \"string\",\n              \"completionRatio\": 7942.712678415792,\n              \"completed\": true,\n              \"completedAt\": \"string\",\n              \"certificateUrl\": \"string\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"pagination\": {\n    \"page\": 443.5031221027508,\n    \"per_page\": 9418.49763833374,\n    \"total\": 1040.2038666102742,\n    \"errors\": 4895.14085440599\n  },\n  \"errors\": [\n    {\n      \"status\": 5178.577318453726,\n      \"message\": \"string\",\n      \"data\": {\n        \"key_0\": {},\n        \"key_1\": {},\n        \"key_2\": {}\n      }\n    },\n    {\n      \"status\": 8406.890369580902,\n      \"message\": \"string\",\n      \"data\": {\n        \"key_0\": {},\n        \"key_1\": {},\n        \"key_2\": {}\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3477a6ba-d5f9-4c38-895b-13aa6b6bc6fb",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    "progress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "20"
+                    },
+                    {
+                      "key": "sort_by",
+                      "value": "email"
+                    },
+                    {
+                      "key": "sort_order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "78d6864e-dcbf-4496-9f36-90074468bcc8",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    "progress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "20"
+                    },
+                    {
+                      "key": "sort_by",
+                      "value": "email"
+                    },
+                    {
+                      "key": "sort_order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "61ab1771-2301-4655-b20b-67a9da2a8818",
+          "name": "Get progress for member by ID",
+          "request": {
+            "name": "Get progress for member by ID",
+            "description": {
+              "content": "Returns progress for a specific organization member.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "organizations",
+                "members",
+                ":memberId",
+                "progress"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "memberId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "openid"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "https://codesignal.com/learn/api/v1/oauth/token"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b4c5c0cb-47cb-4924-8295-ef25dfd540b8",
+              "name": "Member progress.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    ":memberId",
+                    "progress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "memberId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"email\": \"string\",\n  \"paths\": [\n    {\n      \"id\": 9080.561456135909,\n      \"title\": \"string\",\n      \"completionRatio\": 731.001201862379,\n      \"completed\": true,\n      \"completedAt\": \"string\",\n      \"certificateUrl\": \"string\",\n      \"job\": {\n        \"id\": \"string\",\n        \"name\": \"string\"\n      },\n      \"courses\": [\n        {\n          \"id\": 5407.154083832404,\n          \"title\": \"string\",\n          \"completionRatio\": 2963.7863028012225,\n          \"completed\": true,\n          \"completedAt\": \"string\",\n          \"certificateUrl\": \"string\"\n        },\n        {\n          \"id\": 2720.6106990927146,\n          \"title\": \"string\",\n          \"completionRatio\": 4448.947575804862,\n          \"completed\": false,\n          \"completedAt\": \"string\",\n          \"certificateUrl\": \"string\"\n        }\n      ]\n    },\n    {\n      \"id\": 5460.298433329191,\n      \"title\": \"string\",\n      \"completionRatio\": 9098.905973803938,\n      \"completed\": false,\n      \"completedAt\": \"string\",\n      \"certificateUrl\": \"string\",\n      \"job\": {\n        \"id\": \"string\",\n        \"name\": \"string\"\n      },\n      \"courses\": [\n        {\n          \"id\": 6415.163160296561,\n          \"title\": \"string\",\n          \"completionRatio\": 6136.620506837992,\n          \"completed\": true,\n          \"completedAt\": \"string\",\n          \"certificateUrl\": \"string\"\n        },\n        {\n          \"id\": 2367.6978680075845,\n          \"title\": \"string\",\n          \"completionRatio\": 4205.476624883043,\n          \"completed\": true,\n          \"completedAt\": \"string\",\n          \"certificateUrl\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c604f315-af9c-40be-a765-cbe1d031d1ab",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    ":memberId",
+                    "progress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "memberId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "cfaf7816-3458-47f2-8400-d53ca45cc3a0",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "organizations",
+                    "members",
+                    ":memberId",
+                    "progress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "memberId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "openid"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://codesignal.com/learn/api/v1/oauth/token"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d013eb06-c269-46e0-9011-fe434a90da04",
+    "name": "Codesignal Learn Public Organization API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API for Codesignal Learn",
+      "type": "text/plain"
+    }
+  }
+}
