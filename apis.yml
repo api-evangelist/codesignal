@@ -10,6 +10,18 @@ description: >-
   HMAC-SHA256 signed deliveries, and an official remote MCP server that lets AI
   agents work with assessments, candidate sessions, and interviews. CodeSignal is
   backed by Menlo Ventures.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
