@@ -104,6 +104,9 @@ apis:
   - type: OpenAPI
     url: openapi/codesignal-organization-api-openapi.yml
 common:
+- type: CapabilityMap
+  url: capabilities/codesignal-capability-edges.yml
+  name: Codesignal Business Capability Map
 - type: MCPServer
   url: mcp/codesignal-mcp.yml
 - type: Webhooks
