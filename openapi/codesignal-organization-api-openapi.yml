@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Codesignal Learn Public Organization API
   version: v1.0.0
@@ -155,6 +155,8 @@ paths:
           $ref: '#/components/schemas/BadRequest'
         '401':
           $ref: '#/components/schemas/Unauthorized'
+      operationId: getApiV1OrganizationsMembers
+      x-operation-id-source: derived
   /api/v1/organizations/members/{memberId}:
     get:
       summary: Get member by ID
@@ -223,6 +225,8 @@ paths:
           $ref: '#/components/schemas/BadRequest'
         '401':
           $ref: '#/components/schemas/Unauthorized'
+      operationId: getApiV1OrganizationsMembersByMemberId
+      x-operation-id-source: derived
   /api/v1/organizations/members/skill-sets:
     get:
       summary: Get skill sets for organization members
@@ -346,6 +350,8 @@ paths:
           $ref: '#/components/schemas/BadRequest'
         '401':
           $ref: '#/components/schemas/Unauthorized'
+      operationId: getApiV1OrganizationsMembersSkillSets
+      x-operation-id-source: derived
   /api/v1/organizations/members/progress:
     get:
       summary: Get progress for organization members
@@ -521,6 +527,8 @@ paths:
           $ref: '#/components/schemas/BadRequest'
         '401':
           $ref: '#/components/schemas/Unauthorized'
+      operationId: getApiV1OrganizationsMembersProgress
+      x-operation-id-source: derived
   /api/v1/organizations/members/{memberId}/progress:
     get:
       summary: Get progress for member by ID
@@ -619,12 +627,14 @@ paths:
           $ref: '#/components/schemas/BadRequest'
         '401':
           $ref: '#/components/schemas/Unauthorized'
+      operationId: getApiV1OrganizationsMembersByMemberIdProgress
+      x-operation-id-source: derived
 components:
   schemas:
-    Unauthorized:
-      description: Unauthorized
     BadRequest:
       description: Bad request
+    Unauthorized:
+      description: Unauthorized
   securitySchemes:
     oauth2:
       type: oauth2
