@@ -631,10 +631,10 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    BadRequest:
-      description: Bad request
     Unauthorized:
       description: Unauthorized
+    BadRequest:
+      description: Bad request
   securitySchemes:
     oauth2:
       type: oauth2
