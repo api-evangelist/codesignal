@@ -44,7 +44,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-18'
+modified: '2026-10-06'
 tags:
 - Company
 - Technical Interview
@@ -104,6 +104,10 @@ apis:
   - type: OpenAPI
     url: openapi/codesignal-organization-api-openapi.yml
 common:
+- url: https://codesignal.com/blog/
+  type: Blog
+- url: https://codesignal.com/feed/
+  type: BlogRSS
 - type: CapabilityMap
   url: capabilities/codesignal-capability-edges.yml
   name: Codesignal Business Capability Map
