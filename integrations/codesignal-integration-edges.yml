@@ -1,0 +1,22 @@
+generated: '2026-10-13'
+method: searched
+checked:
+- https://aws.amazon.com/marketplace/
+marketplace_apps: []
+edges:
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=3cb70e0f-56cd-4047-b121-511ef38ed557
+  listing_count: 2
+  apps:
+  - CodeSignal Assessments & Live Tech Interviews
+  - 'CodeSignal Learn: Build Job-Ready Skills with AI-Powered Learning Paths'
+  seller_name: CodeSignal, Inc.
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
