@@ -1,7 +1,10 @@
 generated: '2026-10-13'
 method: searched
 checked:
+- greenhouse/integrations/greenhouse-integration-edges.yml
 - https://aws.amazon.com/marketplace/
+- okta/integrations/okta-integration-edges.yml
+- workday/integrations/workday-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -20,3 +23,67 @@ edges:
   seller_name: CodeSignal, Inc.
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: Greenhouse (own)
+  partner: greenhouse
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://integrations.greenhouse.com/partners/code-signal
+  mirror_of: greenhouse/integrations/greenhouse-integration-edges.yml
+  apps:
+  - CodeSignal
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+- partner_name: Okta (own)
+  partner: okta
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.okta.com/integrations/integrator-6296611_codesignal20_1/
+  mirror_of: okta/integrations/okta-integration-edges.yml
+  apps:
+  - CodeSignal
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Lifecycle Management
+  badges:
+  - OKTA_VERIFIED
+  features:
+  - CREATE
+  - DEACTIVATE
+  - GROUP_PUSH
+  - SAML
+  - UPDATE
+- partner_name: Workday (own)
+  partner: workday
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.workday.com/apps/588865/codesignal-ai-native-skills-assessments
+  mirror_of: workday/integrations/workday-integration-edges.yml
+  apps:
+  - CodeSignal AI-Native Skills Assessments
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Region & Country
+  badges:
+  - Design Approved
+source:
+- greenhouse/integrations/greenhouse-integration-edges.yml
+- okta/integrations/okta-integration-edges.yml
+- workday/integrations/workday-integration-edges.yml

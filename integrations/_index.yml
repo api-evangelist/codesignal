@@ -15,3 +15,41 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
+- slug: codesignal-greenhouse-own
+  label: Greenhouse (own)
+  partner: greenhouse
+  partner_name: Greenhouse (own)
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://integrations.greenhouse.com/partners/code-signal
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: codesignal-okta-own
+  label: Okta (own)
+  partner: okta
+  partner_name: Okta (own)
+  category: Lifecycle Management
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.okta.com/integrations/integrator-6296611_codesignal20_1/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: codesignal-workday-own
+  label: Workday (own)
+  partner: workday
+  partner_name: Workday (own)
+  category: Region & Country
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.workday.com/apps/588865/codesignal-ai-native-skills-assessments
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
