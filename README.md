@@ -64,6 +64,132 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Codesignal is a company surfaced as a portfolio company of menlo-ventures and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+CodeSignal is a technical interview and skills-assessment platform used by companies to screen, interview, and upskill software engineers. Its developer surface includes a GraphQL API (companies, tests, test sessions, interviews, and interview templates), a versioned Learn REST API (OpenAPI 3.1) for organization members, skill sets, and learning progress, a webhook event API covering assessment, candidate, auditor, and live-interview workflows with HMAC-SHA256 signed deliveries, and an official remote MCP server that lets AI agents work with assessments, candidate sessions, and interviews. CodeSignal is backed by Menlo Ventures.
 
-Backed by: menlo-ventures — https://codesignal.com
+**Areas:** Company · Technical Interview · Skills Assessment · Hiring · Recruiting · Developer Skills · Assessment · Education · GraphQL · Webhook
+
+## Codesignal on APIs.io
+
+Everything profiled for Codesignal is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/codesignal/](https://apis.io/providers/codesignal/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [CodeSignal GraphQL API](https://apis.io/apis/codesignal/codesignal-graphql-api/) — Primary GraphQL API for companies, tests, test sessions, live interviews, and interview templates. Authenticated with an API key.
+- [CodeSignal Webhook API](https://apis.io/apis/codesignal/codesignal-webhook-api/) — Outbound webhook events across assessment, candidate, auditor, and live-interview workflows. Deliveries are signed with HMAC-SHA256.
+- [Codesignal Organization API](https://apis.io/apis/codesignal/codesignal-organization-api/) — The Organization API from Codesignal — 5 operation(s) for organization.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Codesignal Webhooks](https://apis.io/asyncapis/codesignal/codesignal-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [codesignal](https://apis.io/servers/codesignal/codesignal/)
+
+#### Collections (1)
+
+Postman and Open Collection request collections.
+
+- [Codesignal Learn Public Organization API](https://apis.io/collections/codesignal/open-codesignal-organization-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Codesignal Learn Overlay](https://apis.io/overlays/codesignal/codesignal-learn-overlay/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Codesignal Authentication](https://apis.io/security/codesignal/codesignal-authentication/)
+- [Codesignal Domain Security](https://apis.io/security/codesignal/codesignal-domain-security/)
+- [Codesignal Trust Center](https://apis.io/security/codesignal/codesignal-trust-center/)
+- [Codesignal Vulnerability Disclosure](https://apis.io/security/codesignal/codesignal-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Codesignal Scopes](https://apis.io/scopes/codesignal/codesignal-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://codesignal.com)
+- [Documentation](https://developer.codesignal.com/)
+- [API reference](https://codesignal.github.io/developer-docs/graphql/)
+- [Pricing](https://codesignal.com/pricing)
+- [Sign up](https://app.codesignal.com/sign-up)
+- [Support](https://support.codesignal.com/)
+- [Blog](https://codesignal.com/blog/)
+- [Security](https://codesignal.com/security/disclosure-policy)
+- [Trust centre](https://trust.codesignal.com/)
+- [Terms of service](https://codesignal.com/terms)
+- [Privacy policy](https://codesignal.com/privacy)
+- [GitHub](https://github.com/codesignal)
+- [Status](https://status.codesignal.com/)
+
+## API Evangelist rating
+
+**Kin Score 47.0** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 51.5 |
+| Contract governance | 4.5 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 47.0 |
+| Access clarity | 39.5 |
+
+**Agent readiness 42.0** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | na |
+| MCP Server | verified |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | na |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | paginated |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 45.1** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/codesignal/](https://apis.io/providers/codesignal/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Codesignal: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/codesignal/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
